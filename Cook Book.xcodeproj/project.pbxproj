@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E35BC501280E045E00D72121 /* Cook_BookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BC500280E045E00D72121 /* Cook_BookApp.swift */; };
-		E35BC503280E045E00D72121 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BC502280E045E00D72121 /* ContentView.swift */; };
 		E35BC505280E045F00D72121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E35BC504280E045F00D72121 /* Assets.xcassets */; };
 		E35BC508280E045F00D72121 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E35BC507280E045F00D72121 /* Preview Assets.xcassets */; };
 		E35BC512280E046000D72121 /* Cook_BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BC511280E046000D72121 /* Cook_BookTests.swift */; };
 		E35BC51C280E046000D72121 /* Cook_BookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BC51B280E046000D72121 /* Cook_BookUITests.swift */; };
 		E35BC51E280E046000D72121 /* Cook_BookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BC51D280E046000D72121 /* Cook_BookUITestsLaunchTests.swift */; };
+		E35BC52B280E053500D72121 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BC52A280E053500D72121 /* HomeView.swift */; };
+		E35BC52D280E055100D72121 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BC52C280E055100D72121 /* NewBookView.swift */; };
+		E35BC52F280E05B500D72121 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BC52E280E05B500D72121 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		E35BC4FD280E045E00D72121 /* Cook Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cook Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E35BC500280E045E00D72121 /* Cook_BookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cook_BookApp.swift; sourceTree = "<group>"; };
-		E35BC502280E045E00D72121 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E35BC504280E045F00D72121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E35BC507280E045F00D72121 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E35BC50D280E046000D72121 /* Cook BookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cook BookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,9 @@
 		E35BC517280E046000D72121 /* Cook BookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cook BookUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E35BC51B280E046000D72121 /* Cook_BookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cook_BookUITests.swift; sourceTree = "<group>"; };
 		E35BC51D280E046000D72121 /* Cook_BookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cook_BookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E35BC52A280E053500D72121 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E35BC52C280E055100D72121 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
+		E35BC52E280E05B500D72121 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E35BC500280E045E00D72121 /* Cook_BookApp.swift */,
-				E35BC502280E045E00D72121 /* ContentView.swift */,
+				E35BC530280E05CA00D72121 /* Home */,
 				E35BC504280E045F00D72121 /* Assets.xcassets */,
 				E35BC506280E045F00D72121 /* Preview Content */,
 			);
@@ -125,6 +129,24 @@
 				E35BC51D280E046000D72121 /* Cook_BookUITestsLaunchTests.swift */,
 			);
 			path = "Cook BookUITests";
+			sourceTree = "<group>";
+		};
+		E35BC530280E05CA00D72121 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E35BC52A280E053500D72121 /* HomeView.swift */,
+				E35BC52E280E05B500D72121 /* HomeViewModel.swift */,
+				E35BC531280E05DB00D72121 /* New Book */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E35BC531280E05DB00D72121 /* New Book */ = {
+			isa = PBXGroup;
+			children = (
+				E35BC52C280E055100D72121 /* NewBookView.swift */,
+			);
+			path = "New Book";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E35BC503280E045E00D72121 /* ContentView.swift in Sources */,
+				E35BC52D280E055100D72121 /* NewBookView.swift in Sources */,
+				E35BC52B280E053500D72121 /* HomeView.swift in Sources */,
 				E35BC501280E045E00D72121 /* Cook_BookApp.swift in Sources */,
+				E35BC52F280E05B500D72121 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +454,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thomasgray.Cook-Book";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomas.Cook-Book";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -459,7 +483,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thomasgray.Cook-Book";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomas.Cook-Book";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
