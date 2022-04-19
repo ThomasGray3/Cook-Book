@@ -10,25 +10,16 @@ import SwiftUI
 struct HomeView: View {
     
     @State var plusTapped = false
+    @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView {
-            VStack {
-                Button {
-                    self.plusTapped.toggle()
-                } label: {
-                    Image(systemName: "plus")
-                        .resizable()
-                        .padding(10)
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(Color.gray)
-                        .background(Color.white)
-                        .clipShape(Circle())
-                }.sheet(isPresented: $plusTapped) {
-                    NewBookView()
-                }
-            }
+            Text(self.viewModel.cookBook?.title ?? "")
             .navigationTitle("Cookbook")
         }
+        .sheet(isPresented: .constant(self.viewModel.cookBook == nil)) {
+            NewBookView(viewModel: viewModel)
+        }
+        
     }
 }
